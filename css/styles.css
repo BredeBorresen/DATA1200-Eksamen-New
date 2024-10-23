@@ -18,19 +18,24 @@ body {
     flex-direction: column;
 }
 
-/* Ensure header and footer fill the full width */
-header, footer {
-    width: 100%;
-    background-color: #fcdd04; /* Example background color */
-}
-
-/* Add padding to the main content area */
 main {
     padding: 1rem;
-    flex: 1; /* Ensures main content takes up available space */
+    flex: 1 0 auto;
 }
 
-/* Ensure the container class has some padding */
+/* Fikser header og footer fyller ut hele siden */
+header, footer {
+    width: 100%;
+    background-color: #fcdd04; 
+}
+
+/* Legger inn padding på main */
+main {
+    padding: 1rem;
+    flex: 1; /* Fikser at main tar opp all ledig plass på siden */
+}
+
+/* Fikser padding på cointerclassen */
 .container {
     width: 90%;
     margin: 0 auto;
@@ -89,12 +94,6 @@ nav ul li a:hover, nav ul li a.active {
     border-radius: 5px;
 }
 
-/* Main content */
-main {
-    padding: 1rem;
-    flex: 1 0 auto;
-}
-
 .hero {
     background: #005aa7;
     color: #fff;
@@ -118,7 +117,7 @@ main {
     animation: fadeIn 0.5s ease-in;
 }
 
-/* Buttons */
+/* Knapper */
 .cta-button {
     display: inline-block;
     padding: 0.8rem 1.5rem;
@@ -135,7 +134,26 @@ main {
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-/* Table styles */
+.toggle-button {
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+    font-size: 16px;
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.toggle-button:hover {
+    background-color: #0056b3;
+}
+
+/* Table */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -169,7 +187,7 @@ footer {
     margin-bottom: 2rem;
 }
 
-.footer-info, .footer-links, .footer-newsletter {
+.footer-info, .footer-links, .footer-nyhetsbrev {
     flex: 1;
     margin-right: 2rem;
     margin-bottom: 1rem;
@@ -189,19 +207,19 @@ footer {
     margin-bottom: 0.5rem;
 }
 
-.footer-newsletter form {
+.footer-nyhetsbrev form {
     display: flex;
     margin-top: 1rem;
 }
 
-.footer-newsletter input[type="email"] {
+.footer-nyhetsbrev input[type="email"] {
     flex-grow: 1;
     padding: 0.5rem;
     border: none;
     border-radius: 4px 0 0 4px;
 }
 
-.footer-newsletter button {
+.footer-nyhetsbrev button {
     padding: 0.5rem 1rem;
     background-color: #003f7f;
     color: white;
@@ -218,13 +236,13 @@ footer {
     border-top: 1px solid #e0e0e0;
 }
 
-.footer-legal a, .footer-social a {
+.footer-legal a, .footer-sosialemedium a {
     color: #333;
     margin-right: 1rem;
     text-decoration: none;
 }
 
-.footer-social a {
+.footer-sosialemedium a {
     font-size: 1.2rem;
 }
 
@@ -233,7 +251,7 @@ footer {
         flex-direction: column;
     }
     
-    .footer-info, .footer-links, .footer-newsletter {
+    .footer-info, .footer-links, .footer-nyhetsbrev {
         margin-right: 0;
         margin-bottom: 2rem;
     }
@@ -243,7 +261,7 @@ footer {
         align-items: flex-start;
     }
     
-    .footer-legal, .footer-social {
+    .footer-legal, .footer-sosialemedium {
         margin-bottom: 1rem;
     }
 }
@@ -262,13 +280,13 @@ footer {
     }
 }
 
-/* Animations */
+/* Animasjoner */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
 
-/* Additional styles */
+/* Ekstra styling */
 .semester {
     margin-bottom: 10px;
 }
@@ -281,32 +299,13 @@ footer {
     display: block;
 }
 
-.toggle-button {
-    cursor: pointer;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 15px;
-    border-radius: 5px;
-    margin-bottom: 5px;
-    width: 100%;
-    font-size: 16px;
-    text-align: left;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s;
-}
-
-.toggle-button:hover {
-    background-color: #0056b3;
-}
-
 .semester-title {
     font-weight: bold;
     font-size: 18px;
     margin: 0;
 }
 
-/* Collapsible styles - Hentet fra W3Schools */
+/* Collapsible styling - Hentet fra W3Schools */
 .collapsible {
     background-color: #777;
     color: white;
@@ -355,32 +354,32 @@ footer {
     width: 20%; /* Juster bredde etter behov */
 }
 
-.learning-table {
+.laering-table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 1rem;
 }
 
-.learning-table th, .learning-table td {
+.laering-table th, .laering-table td {
     padding: 0.75rem;
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
 
-.learning-table th {
+.laering-table th {
     background-color: #005aa7;
     color: #fff;
 }
 
-.learning-table tr:nth-child(even) {
+.laering-table tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
-/* Add styles for the main heading */
+/* Legger inn styling for intro h2 overskrift */
 #intro h2 {
-    font-size: 3rem; /* Increase the font size */
-    font-weight: bold; /* Make the text bold */
-    color: #000000; /* Change the color for better visibility */
-    text-align: center; /* Center the heading */
-    margin-bottom: 1rem; /* Add some space below the heading */
+    font-size: 3rem; 
+    font-weight: bold; 
+    color: #000000; 
+    text-align: center; 
+    margin-bottom: 1rem;
 }
