@@ -95,11 +95,6 @@ section {
     grid-template-columns: auto 1fr;
 }
 
-.semester-table {
-    grid-template-columns: 2fr 1fr 1fr;
-    background-color: #fcdd04;
-    color: #1c2e4a;
-}
 
 /* Prosjekter grid */
 .prosjekter-grid {
@@ -352,24 +347,26 @@ form {
     font-weight: bold;
     color: #1c2e4a;
     font-size: 1.1em;
+    padding: 10px;
 }
 
 .unit {
     color: #666;
-    font-size: 0.9em;
+    font-size: 1em;
 }
 
 /* Semester nummer styling */
 .semester-number {
     color: #fcdd04;
     font-weight: bold;
-    margin-right: 5px;
+    margin-right: 1em;
 }
 
 /* Emnekode styling */
 .course-code {
     font-family: monospace;
     color: #666;
+    padding: 10em;
 }
 
 /* Email styling */
@@ -557,3 +554,105 @@ header {
     .intro-grid {
         grid-template-columns: 1fr;
     }
+
+
+
+    .bedrebilder-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        font-size: 16px;
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+    }
+    
+    .bedrebilder-table thead {
+        background-color: #e36aad;
+        color: white;
+    }
+    
+    .bedrebilder-table,
+    .bedrebilder-table{
+        border: 1px solid #ddd;
+        padding: 12px 15px;
+        text-align: left;
+    }
+    
+    .bedrebilder-table tbody tr:hover {
+        background-color: #fff1f9;
+    }
+
+    /* Legger til styling for bilder som skal være til høyre */
+.image-right {
+    float: right;
+    margin: 0 0 1rem 1rem;
+    max-width: 20%;  /* Juster denne verdien etter behov */
+}
+
+/* Legg til clearfix for å unngå flytproblemer */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.landskap-bilde {
+    max-width: 70%;      /* Sikrer at bildet ikke blir bredere enn container */
+    height: auto;         /* Beholder aspekt ratio */
+    border-radius: 8px;   /* Avrundede hjørner */
+    margin: 1rem 0;       /* Margin over og under */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);  /* Lett skyggeeffekt */
+}
+
+.blomster-bilde {
+    max-width: 70%;      /* Sikrer at bildet ikke blir bredere enn container */
+    height: auto;         /* Beholder aspekt ratio */
+    border-radius: 8px;   /* Avrundede hjørner */
+    margin: 1rem 0;       /* Margin over og under */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);  /* Lett skyggeeffekt */
+}
+
+.bedrebilder-table {
+    border-collapse: collapse;
+    border: solid black 1px;
+    background-color: #f5d5dd
+}
+
+.bedrebilder-table tr {
+    border-bottom: solid black 1px;
+}
+
+.bedrebilder-table tbody tr:nth-child(even) {
+    background-color: #f6cce1; /* Mørkere rosa for annenhver rad */
+}
+
+.bedrebilder-table {
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.75em;
+    border: dashed black 1px;
+}
+
+.bedrebilder-table th {
+    background-color: #eeabc3;
+    color: #000000;
+}
+    
+/* Bildegalleri med grid */
+.tips-bilder {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  /* To like kolonner */
+    gap: 2rem;  /* Mellomrom mellom bildene */
+    margin: 2rem 0;
+}
+
+
+
+/* For løvbilde */
+.tips-bilder img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
