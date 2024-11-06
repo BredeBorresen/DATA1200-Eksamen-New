@@ -1,4 +1,5 @@
 /* Reset og grunnleggende stiler */
+
 * {
     margin: 0;
     padding: 0;
@@ -9,6 +10,12 @@
     font-family: monospace;
     font-size: 0.9em;
 }
+
+/* Gir Overskrifter en generell strøelse */
+h1 { font-size: 2rem; }
+h2 { font-size: 1.75rem; }
+h3 { font-size: 1.5rem; }
+
 
 /* Grid og spacing */
 .grid-section {
@@ -32,10 +39,22 @@
     gap: 2rem;
 }
 
+
 /* Form elements */
 input, button,textarea {
     font-size: 1em;
     padding: 0.5em 0.75em;
+}
+
+
+/* Main og body */
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: minmax(0, 1000px);
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
 }
 
 body {
@@ -52,6 +71,66 @@ body {
     min-height: 100vh;
 }
 
+
+/* Header styling */
+header {
+    grid-area: header;
+    background: #1c2e4a;
+    color: #ffffff;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Header content */
+.header-content {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem; /* Space for the nav bar */
+    justify-content: space-between;
+}
+
+/* Logo styling */
+.header-logo {
+    max-width: 70px;
+    vertical-align: middle;
+}
+
+
+/* Navigation bar styling*/
+/* Navigasjon grid */
+.nav-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+}
+
+/* Navigasjon lister */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    justify-content: flex-start;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #fcdd04;
+    color: #1c2e4a;
+    border-bottom: 2px solid #fcdd04; /* Hover effect */
+}
+
+
 /* Container */
 .container {
     width: 90%;
@@ -61,23 +140,15 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: row-reverse; /* Flytter logo/tittel til høyre */
 }
 
-main {
-    grid-area: main;
-    display: grid;
-    grid-template-columns: minmax(0, 1000px);
-    justify-content: center;
-    gap: 2rem;
-    padding: 2rem;
-}
 
 /* Seksjoner */
 section {
     display: grid;
     gap: 1.5rem;
 }
+
 
 /* Tabeller */
 .intro-table, .semester-table {
@@ -91,11 +162,8 @@ section {
     margin: 1em 0;
 }
 
-.intro-table {
-    grid-template-columns: auto 1fr;
-}
 
-
+/* Prosjekter styling */
 /* Prosjekter grid */
 .prosjekter-grid {
     display: grid;
@@ -118,77 +186,6 @@ section {
     transition: all 0.3s ease;
 }
 
-/* Footer */
-footer {
-    grid-area: footer;
-    background-color: #1c2e4a;
-    color: #ffffff;
-    padding: 2rem 0;
-}
-.footer-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 2rem;
-    margin-bottom: 2rem;
-}
-
-.footer-info {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.footer-logo {
-    width: 120px;
-    height: auto;
-}
-
-.footer-links {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.footer-links ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.footer-nyhetsbrev {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.footer-nyhetsbrev form {
-    display: flex;
-    gap: 0.5rem;
-}
-
-.footer-nyhetsbrev input[type="email"] {
-    flex: 1;
-    padding: 0.75em 1em;
-    border: none;
-    border-radius: 4px;
-    font-size: 1em;
-}
-
-.footer-nyhetsbrev button {
-    padding: 0.75em 1.5em;
-    border: none;
-    background: #fcdd04;
-    color: #1c2e4a;
-    font-weight: bold;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1em;
-}
-
-.footer-nyhetsbrev button:hover {
-    background: #e6c503;
-}
 
 /* Lenker og knapper */
 a {
@@ -197,6 +194,7 @@ a {
     transition: color 0.3s ease;
 }
 
+/* Endrer farge til gul når man hovrer over */
 a:hover {
     color: #fcdd04;
 }
@@ -215,30 +213,34 @@ a:hover {
     background: #e6c503;
 }
 
-/* Intro-grid */
-.intro-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+.links, .links:hover {
+    color: blue;
+    text-decoration: underline;
 }
 
-/* Bilder og figurer */
-figure {
-    display: grid;
-    grid-template-rows: 1fr auto;
-    gap: 0.5rem;
-}
-
-/* Liste-grid */
-ul:not(.footer-links ul) {
-    display: grid;
-    gap: 0.5rem;
+button {
+    padding: 0.75em 1.5em;
+    font-size: 1em;
 }
 
 /* Form-grid */
 form {
     display: grid;
     gap: 1rem;
+}
+
+
+/* Bilder og figurer styling */
+figure {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    gap: 0.5rem;
+}
+/* Bilde på index */
+.full-width-image{
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
 /* Bildegalleri grid */
@@ -256,23 +258,11 @@ form {
     align-items: start;
 }
 
-/* Navigasjon grid */
-.nav-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 1rem;
-}
-
-/* Bilder */
-.full-width-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.program-illustration {
+/* Gir margin til bilde*/
+.program-illustration { 
     margin: 2rem 0;
 }
+
 
 /* Collapsible styling */
 .collapsible {
@@ -300,10 +290,6 @@ form {
     margin-left: 5px;
 }
 
-.collapsible.active:after {
-    content: "\2212"; /* Unicode for minus symbol */
-}
-
 /* Hover effekt */
 .collapsible:hover {
     background-color: #2a4370;
@@ -313,11 +299,7 @@ form {
 .collapsible.active {
     background-color: #fcdd04;
     color: #1c2e4a;
-}
-
-.collapsible.active:after {
-    color: #1c2e4a;
-}
+} 
 
 /* Content styling */
 .content {
@@ -332,15 +314,16 @@ form {
 
 /* Highlight viktige seksjoner */
 #intro.grid-section {
-    border-top: 4px solid #fcdd04;
+    border-top: 1px solid #fcdd04;
 }
 
-/* Highlight tekst */
-.highlight {
-    background-color: #fcdd04;
-    padding: 0 5px;
-    color: #1c2e4a;
+/* Intro-grid */
+.intro-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
 }
+
 
 /* Studiepoeng styling */
 .points {
@@ -412,21 +395,11 @@ footer h3 {
     text-decoration: underline;
 }
 
-/* Headers */
-h1 { font-size: 2rem; }
-h2 { font-size: 1.75rem; }
-h3 { font-size: 1.5rem; }
-
 .footer-nyhetsbrev input {
     padding: 0.75em 1em;
     font-size: 1em;
 }
 
-/* Button styling */
-button {
-    padding: 0.75em 1.5em;
-    font-size: 1em;
-}
 
 /* Form elements */
 input, 
@@ -444,97 +417,23 @@ h1 a {
 .met-text {
     color: #fcdd04;
 }
-/* Navigation */
-nav {
-    display: flex;
-    justify-content: flex-end; /* Aligns nav to the right */
-    font-size: 1.1em; /* Relative to parent */
-    margin-left: auto;
-}
 
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-    justify-content: flex-start;
-}
-
-nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-}
-
-nav ul li a:hover,
-nav ul li a.active {
-    background-color: #fcdd04;
-    color: #1c2e4a;
-    border-bottom: 2px solid #fcdd04; /* Hover effect */
-}
-
-/* Header styling */
-header {
-    grid-area: header;
-    background: #1c2e4a;
-    color: #ffffff;
-    padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Header content */
-.header-content {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem; /* Space for the nav bar */
-    justify-content: space-between;
-}
-
-/* Logo styling */
-.header-logo {
-    max-width: 70px;
-    vertical-align: middle;
-}
-
-/* Responsive adjustments for mobile (max-width: 768px) */
+/* Responsive design for bruk av ulike skjermstørelser (max-width: 768px) */
 @media (max-width: 768px) {
-    /* Root font size */
+    /* Root font størelse */
     :root {
-        font-size: 14px; /* Smaller base size on mobile */
+        font-size: 14px; /* Setter en mindre størelse for mobil */
     }
 
-    /* Container width adjustment */
+    /* Container width justering */
     .container {
         width: 95%;
-        flex-direction: column; /* Stacks content vertically */
+        flex-direction: column; /* Setter opp innhold vertikalt */
         align-items: center;
-    }
-
-    /* Header content alignment */
-    .header-content {
-        text-align: center;
-        flex-direction: column; /* Stacks logo/title above nav */
-        margin-bottom: 1rem;
-    }
-
-    /* Navigation adjustments */
-    nav ul {
-        flex-direction: column;
-        gap: 1rem;
-        align-items: center;
-        width: 100%;
-        text-align: center;
-    }
-
-    nav ul li a {
-        padding: 0.5em 1em; /* Reduced padding on mobile */
     }
 }
- .footer-grid {
+
+.footer-grid {
         grid-template-areas:
             "info"
             "links"
@@ -555,9 +454,33 @@ header {
         grid-template-columns: 1fr;
     }
 
+.landskap-bilde {
+    max-width: 70%;      /* Sikrer at bildet ikke blir bredere enn container */
+    height: auto;         /* Beholder aspekt ratio */
+    border-radius: 8px;   /* Avrundede hjørner */
+    margin: 1rem auto;       /* Margin over og under */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);  /* Lett skyggeeffekt */
+    display: block;
+}
 
+.blomster-bilde {
+    max-width: 70%;      /* Sikrer at bildet ikke blir bredere enn container */
+    height: auto;         /* Beholder aspekt ratio */
+    border-radius: 8px;   /* Avrundede hjørner */
+    margin: 1rem auto;       /* Margin over og under */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);  /* Lett skyggeeffekt */
+    display: block;
+}
 
-    .bedrebilder-table {
+figcaption {
+    margin-top: 0.5rem; /* Gir litt avstand mellom bildet og underteksten */
+    font-size: 0.9rem;  /* Justerer skriftstørrelsen */
+    color: #555;        /* Valgfritt: justerer tekstfargen for et subtilt uttrykk */
+    text-align: center; /* Sentrerer teksten */
+}
+ /* Styling av Activity siden */
+
+.bedrebilder-table {
         width: 100%;
         border-collapse: collapse;
         margin: 20px 0;
@@ -565,80 +488,24 @@ header {
         font-family: Arial, sans-serif;
         background-color: #f9f9f9;
     }
-    
+
     .bedrebilder-table thead {
-        background-color: #e36aad;
-        color: white;
+        background-color: #fcdd04;
+        color: rgb(5, 5, 5);
     }
-    
-    .bedrebilder-table,
-    .bedrebilder-table{
+
+    .bedrebilder-table th,
+    .bedrebilder-table td {
         border: 1px solid #ddd;
         padding: 12px 15px;
         text-align: left;
     }
-    
-    .bedrebilder-table tbody tr:hover {
-        background-color: #fff1f9;
+
+    .bedrebilder-table a {
+        color: #1c2e4a;
+        text-decoration: underline;
     }
 
-    /* Legger til styling for bilder som skal være til høyre */
-.image-right {
-    float: right;
-    margin: 0 0 1rem 1rem;
-    max-width: 20%;  /* Juster denne verdien etter behov */
-}
-
-/* Legg til clearfix for å unngå flytproblemer */
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-.landskap-bilde {
-    max-width: 70%;      /* Sikrer at bildet ikke blir bredere enn container */
-    height: auto;         /* Beholder aspekt ratio */
-    border-radius: 8px;   /* Avrundede hjørner */
-    margin: 1rem 0;       /* Margin over og under */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);  /* Lett skyggeeffekt */
-}
-
-.blomster-bilde {
-    max-width: 70%;      /* Sikrer at bildet ikke blir bredere enn container */
-    height: auto;         /* Beholder aspekt ratio */
-    border-radius: 8px;   /* Avrundede hjørner */
-    margin: 1rem 0;       /* Margin over og under */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);  /* Lett skyggeeffekt */
-}
-
-.bedrebilder-table {
-    border-collapse: collapse;
-    border: solid black 1px;
-    background-color: #f5d5dd
-}
-
-.bedrebilder-table tr {
-    border-bottom: solid black 1px;
-}
-
-.bedrebilder-table tbody tr:nth-child(even) {
-    background-color: #f6cce1; /* Mørkere rosa for annenhver rad */
-}
-
-.bedrebilder-table {
-    padding-left: 1em;
-    padding-right: 1em;
-    padding-top: 0.5em;
-    padding-bottom: 0.75em;
-    border: dashed black 1px;
-}
-
-.bedrebilder-table th {
-    background-color: #eeabc3;
-    color: #000000;
-}
-    
 /* Bildegalleri med grid */
 .tips-bilder {
     display: grid;
@@ -648,11 +515,85 @@ header {
 }
 
 
-
 /* For løvbilde */
 .tips-bilder img {
     width: 100%;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Footer styling*/
+footer {
+    grid-area: footer;
+    background-color: #1c2e4a;
+    color: #ffffff;
+    padding: 2rem 0;
+}
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Styling av logo bilde på footer */
+.footer-logo {
+    width: 120px;
+    height: auto;
+}
+
+/* Styling av linkene på footer */
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-links ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-nyhetsbrev {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-nyhetsbrev form {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.footer-nyhetsbrev input[type="email"] {
+    flex: 1;
+    padding: 0.75em 1em;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+/* Styling av knappen å footer */
+.footer-nyhetsbrev button {
+    padding: 0.75em 1.5em;
+    border: none;
+    background: #fcdd04;
+    color: #1c2e4a;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.footer-nyhetsbrev button:hover {
+    background: #e6c503;
 }
