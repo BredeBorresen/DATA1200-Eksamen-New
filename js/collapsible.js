@@ -1,4 +1,4 @@
-// Collapsible script - Hentet fra W3Schools, url: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_collapsible_symbol
+// Collapsible script -> Hentet inspirasjon fra W3Schools, url: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_collapsible_symbol
 var coll = document.getElementsByClassName("collapsible");
 var i;
 
