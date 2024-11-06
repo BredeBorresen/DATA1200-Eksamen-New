@@ -78,7 +78,7 @@ nav ul {
 }
 
 section ul {
-    padding-left: 50px;
+    padding-left: 50px
 }
 
 nav ul li {
@@ -386,4 +386,101 @@ footer {
     color: #000000; 
     text-align: center; 
     margin-bottom: 1rem;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspekt ratio */
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Legger til styling for bilder som skal være til høyre */
+.image-right {
+    float: right;
+    margin: 0 0 1rem 1rem;
+    max-width: 20%;  /* Juster denne verdien etter behov */
+}
+
+/* Legg til clearfix for å unngå flytproblemer */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.landskap-bilde {
+    max-width: 70%;      /* Sikrer at bildet ikke blir bredere enn container */
+    height: auto;         /* Beholder aspekt ratio */
+    border-radius: 8px;   /* Avrundede hjørner */
+    margin: 1rem 0;       /* Margin over og under */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);  /* Lett skyggeeffekt */
+}
+
+.blomster-bilde {
+    max-width: 70%;      /* Sikrer at bildet ikke blir bredere enn container */
+    height: auto;         /* Beholder aspekt ratio */
+    border-radius: 8px;   /* Avrundede hjørner */
+    margin: 1rem 0;       /* Margin over og under */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);  /* Lett skyggeeffekt */
+}
+
+.bedrebilder-table {
+    border-collapse: collapse;
+    border: solid black 1px;
+    background-color: #f5d5dd
+}
+
+.bedrebilder-table tr {
+    border-bottom: solid black 1px;
+}
+
+.bedrebilder-table tbody tr:nth-child(even) {
+    background-color: #f6cce1; /* Mørkere rosa for annenhver rad */
+}
+
+.bedrebilder-table th, td {
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.75em;
+    border: dashed black 1px;
+}
+
+.bedrebilder-table th {
+    background-color: #eeabc3;
+    color: #000000;
+}
+    
+/* Bildegalleri med grid */
+.tips-bilder {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  /* To like kolonner */
+    gap: 2rem;  /* Mellomrom mellom bildene */
+    margin: 2rem 0;
+}
+
+.tips-bilder img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Responsiv tilpasning */
+@media (max-width: 768px) {
+    .tips-bilder {
+        grid-template-columns: 1fr;  /* Én kolonne på mindre skjermer */
+    }
 }
