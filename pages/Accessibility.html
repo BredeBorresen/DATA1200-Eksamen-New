@@ -32,8 +32,22 @@
     <main>
         <section id="accessibility">
             <h2>Tilgjengelighetstest</h2>
-            <p>Vi brukte <a href="https://wave.webaim.org" target="_blank">WAVE-testen</a> for å sjekke tilgjengeligheten på nettstedet.</p>
-            <p>Resultater viste god kontrast og enkel navigasjon for skjermlesere, med riktig indeksering og fokus på brukervennlighet. </p>
+            <p>Vi brukte <a href="https://wave.webaim.org" target="_blank">WAVE-testen</a> for å sjekke accessibility på nettsteden.</p>
+            <p>Testen viste god kontrast i henhold til WCAG AA og WCAG AAA samt enkel navigasjon for skjermlesere, med riktig indeksering og fokus på brukervennlighet. </p>
+            <img src="/images/GodkjentKontrast.png" class ="full-width-image">
+            <figcaption> Godkjennelse av kontraster.</figcaption>
+            <p>Wave testen ga først advarsel om at flere tabeller manglet header noe vi la til. Advarselen gikk bort etter endringene.</p>
+            <img src="/images/IndexGodkjentWave.png" class ="full-width-image">
+            <figcaption> Godkjennelse av wavetest.</figcaption>
+            <p>Github, aktivitet og tilgjengelighetssidene viste redundent link for hjem. Vi valgte å ikke gjøre endringer her fordi vi mener at flere måter å komme seg til hjemmesiden er viktigere enn en adversel om redundent link.</p>
+            <img src="/images/RedundantLinkBilde.png" class ="full-width-image">
+            <figcaption>Adversel om redundent link</figcaption>
+            <p>Etter å ha manuelt analysert nettsiden kom vi over kontrastfeil etter man klikker på de ulike semestrene. Her blir semestertallet borte på grunn av at vi ga den gul farge så den skulle "forsvinne" når man klikker seg inn på et semester.</p>
+            <p>Dette gjorde vi for å gi et visuelt appelerende design for brukeren. Vi valgte å ignorere kontrast erroren da den har lite relevans og vil påvirke brukeren i liten grad</p>
+            <p>For å endre en slik kontrast feil kunne vi ha gitt den en annen farge så det blir høy kontrast.</p>
+            <img src="/images/IndexWaveKontrastFeil.png" class ="full-width-image">
+            <figcaption>Kontrastfeil for semestertall.</figcaption>
+
         </section>
 
         <section id="design-choices">
