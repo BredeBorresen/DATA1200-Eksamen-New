@@ -298,8 +298,11 @@ figure {
 /* Aktiv tilstand */
 .collapsible.active {
     background-color: #fcdd04;
-    color: #1c2e4a;
+    color: black;
+    
 } 
+
+
 
 /* Content styling */
 .content {
@@ -344,6 +347,7 @@ figure {
     font-weight: bold;
     margin-right: 1em;
 }
+
 
 /* Emnekode styling */
 .course-code {
