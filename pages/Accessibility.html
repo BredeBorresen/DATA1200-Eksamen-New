@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vår Accessibility side">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Tilgjengelighet - OsloMet</title>
     <link rel="stylesheet" href="/css/styles.css">
@@ -34,27 +35,50 @@
             <h2>Tilgjengelighetstest</h2>
             <p>Vi brukte <a href="https://wave.webaim.org" target="_blank">WAVE-testen</a> for å sjekke accessibility på nettsteden.</p>
             <p>Testen viste god kontrast i henhold til WCAG AA og WCAG AAA samt enkel navigasjon for skjermlesere, med riktig indeksering og fokus på brukervennlighet. </p>
-            <img src="/images/GodkjentKontrast.png" class ="full-width-image">
+            <img src="/images/GodkjentKontrast.png" class ="full-width-image" alt="Bilde av god kontrast på nettsiden vår">
             <figcaption> Godkjennelse av kontraster.</figcaption>
             <p>Wave testen ga først advarsel om at flere tabeller manglet header noe vi la til. Advarselen gikk bort etter endringene.</p>
-            <img src="/images/IndexGodkjentWave.png" class ="full-width-image">
+            <img src="/images/IndexGodkjentWave.png" class ="full-width-image" alt="Bilde av godkjent Wave test av siden.">
             <figcaption> Godkjennelse av wavetest.</figcaption>
             <p>Github, aktivitet og tilgjengelighetssidene viste redundent link for hjem. Vi valgte å ikke gjøre endringer her fordi vi mener at flere måter å komme seg til hjemmesiden er viktigere enn en adversel om redundent link.</p>
-            <img src="/images/RedundantLinkBilde.png" class ="full-width-image">
+            <img src="/images/RedundantLinkBilde.png" class ="full-width-image" alt="Bilde av 1 alert på siden vår.">
             <figcaption>Adversel om redundent link</figcaption>
             <p>Etter å ha manuelt analysert nettsiden kom vi over kontrastfeil etter man klikker på de ulike semestrene. Her blir semestertallet borte på grunn av at vi ga den gul farge så den skulle "forsvinne" når man klikker seg inn på et semester.</p>
             <p>Dette gjorde vi for å gi et visuelt appelerende design for brukeren. Vi valgte å ignorere kontrast erroren da den har lite relevans og vil påvirke brukeren i liten grad</p>
             <p>For å endre en slik kontrast feil kunne vi ha gitt den en annen farge så det blir høy kontrast.</p>
-            <img src="/images/IndexWaveKontrastFeil.png" class ="full-width-image">
+            <img src="/images/IndexWaveKontrastFeil.png" class ="full-width-image" alt="Bilde av ok konstrast feil på index siden vår.">
             <figcaption>Kontrastfeil for semestertall.</figcaption>
 
         </section>
 
         <section id="design-choices">
             <h2>Designvalg</h2>
-            <p>For å sikre universell design valgte vi en lettlest font og kontrastfarger som gjør tekst tilgjengelig for alle.</p>
-            <p>Fargevalget er gjort for å sikre god kontrast og lett lesbarhet, med mørke bakgrunner og hvite tekster. Dette er viktig for å sikre at alle kan bruke nettstedet uten problemer.</p>
-            <p>Fargepaletten vår er nøye utvalgt basert på psykologiske assosiasjoner og OsloMets verdier:</p>
+            <p>With the regards of redoing the design of the OsloMet website, we collectively agreed that we wanted to make a better version of the website, while simultaneously preserve the colour palette that OsloMet already are known for.
+                This choice was made based on wanting to beware the colour pallet that OsloMet is known for, so earlier users of the OsloMet sites could recognize the site.
+                Luckily for us, the colour pallet of the OsloMet website was already great regearing the contrast ratio, taking the principles of universal design into account. 
+            </p>
+            <p>
+            We have also emphasized use of the standardized norms for picking coding choices, such as using header, nav, main and footer for easier understanding of the code. 
+            This makes it easier for others, who have not been a part of the development of the code to understand, in case the want to continue the development further on the code. 
+            Using standardized coding also contains the usage of responsive designs, that not only is functional with the three formats we were instructed to implement. Making the website responsive to fit all the sizes that is possible for a user to use. 
+            </p>
+            <p>
+            Furthermore, we have designed the website to according to the “WCAG 2.1” principle of universal design (Web Content Accessibility Guidelines). This principle is to ensure a clean and simple 
+            layout that minimize the cognitive load on the users and facilitates ease of use for the users. Therefore, according to the principle, we have organized the website in a way, where the user 
+            has 1-2 things to focus on, before scrolling down, and continuing using the site.  We have also reused the same navigation throughout our site, to make it as easy as possible to understand and navigate.
+            </p>
+            <p>
+            As for the code, we have developed the site, with the principle of “perceptible Information” in thought, therefore using code such as alt on pictures, easing the understanding of which pictures are where from the development side. 
+            The use of <alt> also provides captions for the pictures, making it easier for the users of the site to understand the pictures. 
+            </p>
+            <p>
+            At last, we have also developed the site with the principle of “Low Physical Effort” at mind. Where, the few interactions we have on our site, is made big enough so it does not come with any difficult of use. 
+            Here again, we have minimized the number of interactions that is required to show all the information of the side, therefore making it as easy as possible for the users that struggles with the use of interactions to use and enjoy the website. 
+            For the automated test used for testing the website, we have used booth the Wave and Lighthouse test.
+            </p>
+
+
+           <!-- Usikker på om dette skal stå eller fjernes-->
             <ul>
                 <li><strong>Mørkeblå (#1c2e4a):</strong> Representerer pålitelighet, stabilitet og profesjonalitet. Dette reflekterer OsloMets rolle som en seriøs utdanningsinstitusjon.</li>
                 <li><strong>Gul (#fcdd04):</strong> Symboliserer optimisme, kreativitet og glede. Dette gjenspeiler OsloMets innovative tilnærming til utdanning og forskning.</li>
@@ -69,7 +93,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-info">
-                    <img src="/images/oslomet-logo.png" alt="Oslo Metropolitan University - Storbyuniversitetet logo" class="footer-logo">
+                    <img src="/images/oslomet-logo.png" alt="Oslo Metropolitan University - Storbyuniversitetet logo" class="footer-logo" alt="Oslomet logo bilde.">
                     <p>Postboks 4, St. Olavs plass<br>0130 Oslo</p>
                     <p>Tlf.: 67 23 50 00</p>
                     <a href="#" class="footer-link">Kontakt oss</a>
