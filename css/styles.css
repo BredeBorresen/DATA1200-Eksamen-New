@@ -258,12 +258,6 @@ figure {
     align-items: start;
 }
 
-/* Gir margin til bilde*/
-.program-illustration { 
-    margin: 2rem 0;
-}
-
-
 /* Collapsible styling */
 .collapsible {
     background-color: #1c2e4a;
