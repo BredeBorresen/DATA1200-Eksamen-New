@@ -349,7 +349,7 @@ form {
     gap: 1rem;
 }
 
-.bedrebilder-table {
+.pris-table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
@@ -358,19 +358,19 @@ form {
     background-color: #f9f9f9;
 }
 
-.bedrebilder-table thead {
+.pris-table thead {
     background-color: #fcdd04;
     color: rgb(5, 5, 5);
 }
 
-.bedrebilder-table th,
-.bedrebilder-table td {
+.pris-table th,
+.pris-table td {
     border: 1px solid #ddd;
     padding: 12px 15px;
     text-align: left;
 }
 
-.bedrebilder-table a {
+.pris-table a {
     color: #1c2e4a;
     text-decoration: underline;
 }
@@ -461,7 +461,7 @@ figcaption {
 }
 
 /* 10.2. Bilde og Figur aktivitetsside */
-.landskap-bilde, .blomster-bilde {
+.sightseeing-bilde {
     max-width: 70%;      /* Sikrer at bildet ikke blir bredere enn container */
     height: auto;         /* Beholder aspekt ratio */
     border-radius: 8px;   /* Avrundede hjørner */
@@ -469,23 +469,6 @@ figcaption {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);  /* Lett skyggeeffekt */
     display: block;
 }
-
-/* Bildegalleri med grid */
-.tips-bilder {
-    display: grid;
-    grid-template-columns: 1fr 1fr;  /* To like kolonner */
-    gap: 2rem;  /* Mellomrom mellom bildene */
-    margin: 2rem 0;
-}
-
-/* For løvbilde */
-.tips-bilder img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
 
 /* 11. Sammenleggbare elementer */
 /* Collapsible styling */
